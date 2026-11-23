@@ -1,0 +1,16 @@
+# Development dependencies and build output
+**/node_modules/
+**/target/
+**/dist/
+
+# Local IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local agent tooling and temporary renders
+/.agents/
+/tmp/
+/Mau_Word/
+/create_word_templates.js
