@@ -1,0 +1,24 @@
+# PostgreSQL for the backend's `postgres` Spring profile.
+# Usage:
+#   docker compose up -d
+#   cd backend && mvn spring-boot:run -Dspring-boot.run.profiles=postgres
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: inventory-postgres
+    environment:
+      POSTGRES_DB: inventorydb
+      POSTGRES_USER: inventory
+      POSTGRES_PASSWORD: inventory
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U inventory -d inventorydb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
