@@ -1,0 +1,28 @@
+# Build outputs
+target/
+dist/
+build/
+node_modules/
+*.class
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Maven wrapper
+!.mvn/wrapper/maven-wrapper.jar
